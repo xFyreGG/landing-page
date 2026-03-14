@@ -17,7 +17,7 @@ body {
   align-items: center;
   justify-content: center;
 
-  min-height: 68vh;
+  min-height: 60vh;
   padding: 110px 20px 40px;
 
   background-image: url("images/background.jpg");
@@ -174,7 +174,7 @@ body {
   top: -40px;
   transform: translateX(-50%);
   width: 60%;
-  height: 1px;
+  height: 2px;
 
   background: linear-gradient(
     to right,
@@ -183,6 +183,7 @@ body {
     transparent
   );
 }
+
 
 .project-card {
   display: grid;
