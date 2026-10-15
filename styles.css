@@ -202,7 +202,7 @@ body {
 
 .project-card {
   display: grid;
-  grid-template-columns: 70px 220px 1fr 60px;
+  grid-template-columns: 70px 270px 1fr 60px;
   align-items: center;
 
   padding: 36px 48px;
@@ -241,12 +241,14 @@ body {
   font-family: "Unbounded", sans-serif;
   font-size: 1.8rem;
   letter-spacing: 1px;
+  white-space: nowrap;
 }
 
 .project-center p {
   color: #ff4800;
   font-size: 0.95rem;
   margin-left: 24px;
+  white-space: nowrap;
 }
 
 /* Arrow Styling*/
