@@ -481,3 +481,122 @@ body {
 .reveal--scale.is-visible {
   transform: translateY(0) scale(1);
 }
+/* RESPONSIVE: PROJECTS */
+
+/* Tablets and small laptops: the same row layout, tightened so the
+   description keeps its room. */
+@media (max-width: 1000px) {
+  .projects {
+    padding: 24px;
+  }
+
+  .project-card {
+    grid-template-columns: 60px 240px 1fr 40px;
+    padding: 28px 32px;
+  }
+
+  .project-left h3 {
+    font-size: 1.5rem;
+  }
+
+  .project-center {
+    margin-left: 32px;
+  }
+}
+
+/* Phones: logo on the left, name with the description beneath it, arrow on
+   the right. The divider line is dropped since the text is stacked. */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 96px 16px 32px;
+  }
+
+  .profile-text {
+    font-size: 1rem;
+    padding: 0 8px;
+  }
+
+  .profile-text p {
+    text-wrap: balance;
+  }
+
+  .socials {
+    gap: 26px;
+    margin-top: 36px;
+  }
+
+  .projects {
+    padding: 0 16px;
+    margin: 40px auto 72px;
+    gap: 12px;
+  }
+
+  .projects::before {
+    top: -24px;
+    width: 80%;
+  }
+
+  .project-card {
+    grid-template-columns: 40px 1fr 24px;
+    grid-template-areas:
+      "logo name arrow"
+      "logo desc arrow";
+    column-gap: 16px;
+    row-gap: 4px;
+    padding: 18px 20px;
+  }
+
+  .project-logo {
+    grid-area: logo;
+  }
+
+  .project-logo img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .project-logo i {
+    width: 32px;
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .project-left {
+    grid-area: name;
+    min-width: 0;
+  }
+
+  .project-left h3 {
+    font-size: 1.15rem;
+  }
+
+  .project-center {
+    grid-area: desc;
+    margin-left: 0;
+    min-width: 0;
+  }
+
+  .project-center::before {
+    display: none;
+  }
+
+  .project-center p {
+    margin-left: 0;
+    font-size: 0.85rem;
+    white-space: normal;
+  }
+
+  .project-right {
+    grid-area: arrow;
+  }
+
+  .arrow {
+    font-size: 1.2rem;
+  }
+
+  /* The lift is a pointer effect; on touch it sticks after a tap. */
+  .project-card:hover {
+    transform: none;
+  }
+}
