@@ -156,6 +156,21 @@ body {
 .project-card:hover .project-logo img {
   transform: scale(1.1);
 }
+
+/* Icon logos (projects without an image logo), sized to match the 37px images. */
+.project-logo i {
+  width: 37px;
+  font-size: 30px;
+  line-height: 37px;
+  text-align: center;
+  color: #fff;
+  filter: brightness(0.95);
+  transition: transform 0.25s ease;
+}
+
+.project-card:hover .project-logo i {
+  transform: scale(1.1);
+}
 .projects {
   position: relative;
   padding: 24px 0;
@@ -282,15 +297,18 @@ body {
 
 /* BRAND ACCENTS */
 
-.brand-alr:hover {
+.brand-alr:hover,
+.brand-toolbox:hover {
   border-color: #ff4800;
 }
 
-.brand-alr:hover .arrow {
+.brand-alr:hover .arrow,
+.brand-toolbox:hover .arrow {
   color: #ff4800;
 }
 
-.brand-alr:hover::before {
+.brand-alr:hover::before,
+.brand-toolbox:hover::before {
   background: linear-gradient(
     110deg,
     transparent,
@@ -360,7 +378,8 @@ body {
 }
 
 /* ALR */
-.brand-alr:hover {
+.brand-alr:hover,
+.brand-toolbox:hover {
   border-color: #ff4800;
   box-shadow:
     0 12px 40px rgba(255, 72, 0, 0.15),
@@ -368,11 +387,14 @@ body {
 }
 
 .brand-alr:hover .arrow,
-.brand-alr:hover .project-center p {
+.brand-toolbox:hover .arrow,
+.brand-alr:hover .project-center p,
+.brand-toolbox:hover .project-center p {
   color: #ff4800;
 }
 
-.brand-alr:hover .project-center::before {
+.brand-alr:hover .project-center::before,
+.brand-toolbox:hover .project-center::before {
   background: #ff4800;
 }
 
